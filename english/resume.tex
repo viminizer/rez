@@ -1,0 +1,106 @@
+%-------------------------
+% Resume in Latex
+% Author : Audric Serador
+% Inspired by: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{kotex}
+
+% pdfTeX-only ATS primitives. Guarded so the file also builds under XeLaTeX,
+% which maps Unicode correctly without them.
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+\fi
+
+
+
+% Custom font.
+% Libertinus over Lato deliberately: Lato's f-ligatures extract from the PDF as
+% single Unicode glyphs (workﬂow, conﬁg, eﬃcient), so ATS keyword search misses
+% them. Libertinus emits plain letters. Verified with pdftotext.
+\usepackage{libertinus-type1}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+% fullpage leaves \footskip at 0pt, which makes fancyhdr warn. There is no
+% footer to position, so this only silences the warning.
+\setlength{\footskip}{4.1pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Accent colour: deep navy. Conservative enough for Korean corporate.
+\definecolor{accent}{rgb}{0.122,0.227,0.373}
+
+% microtype provides \textls for the letterspaced name in the header. Unlike
+% the soul package it does not inject spaces into extracted text.
+\usepackage{microtype}
+
+% Sections formatting: bold + accent colour, accent rule.
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries\color{accent}
+}{}{0em}{}[\color{accent}\titlerule\vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\ifdefined\pdfgentounicode
+  \pdfgentounicode=1
+\fi
+
+%-------------------------%
+% Custom commands
+\begin{document}
+\include{custom-commands}
+
+%-------------------------------------------%
+%%%%%%  RESUME STARTS HERE  %%%%%
+
+%----------HEADING----------%
+\input{src/heading}
+
+%-----------Summary-----------%
+\input{src/summary}
+
+%-----------SKILLS-----------%
+\input{src/skills.tex}
+
+%-----------EXPERIENCE-----------%
+\input{src/experience}
+
+%-----------PROJECTS-----------%
+\input{src/projects}
+
+%-----------EDUCATION-----------%
+\input{src/education}
+
+%---------Languages--------%
+\input{src/languages}
+%-------------------------------------------%
+\end{document}
