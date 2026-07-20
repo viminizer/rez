@@ -6,14 +6,28 @@ so you can replace the text and keep the layout.
 - `english/` - English resume
 - `korean/` - Korean resume, with Hangul support
 
-## Use on Overleaf
+## Open on Overleaf (one click)
 
-1. Download this repo as a ZIP, or zip the `english/` or `korean/` folder.
+[![Open English template in Overleaf](https://img.shields.io/badge/Open%20in%20Overleaf-English-47A141?logo=overleaf&logoColor=white)](https://www.overleaf.com/docs?snip_uri=https%3A%2F%2Fraw.githubusercontent.com%2Fviminizer%2Frez%2Fmain%2Foverleaf%2Fresume-template-english.zip&main_document=resume.tex)
+[![Open Korean template in Overleaf](https://img.shields.io/badge/Open%20in%20Overleaf-Korean-47A141?logo=overleaf&logoColor=white)](https://www.overleaf.com/docs?snip_uri=https%3A%2F%2Fraw.githubusercontent.com%2Fviminizer%2Frez%2Fmain%2Foverleaf%2Fresume-template-korean.zip&main_document=resume.tex)
+
+Overleaf downloads the template and makes the project for you. Nothing to
+save or upload.
+
+## Or upload the ZIP yourself
+
+The same files are in [`overleaf/`](overleaf) if you would rather do it by hand:
+
+1. Download `resume-template-english.zip` or `resume-template-korean.zip`.
 2. On Overleaf: **New Project** - **Upload Project**.
-3. Keep the compiler on **pdfLaTeX**.
+
+Keep the compiler on **pdfLaTeX**. It is the default, and the Korean template
+needs it.
 
 `resume.tex` is the main file. Edit the files in `src/` and leave
 `resume.tex` and `custom-commands.tex` alone - that is where the styling lives.
+
+If you change anything, run `./make-zips.sh` to rebuild the ZIPs.
 
 ## Why these choices
 
