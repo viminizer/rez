@@ -1,3 +1,5 @@
+**English** | [O'zbekcha](README.uz.md)
+
 # LaTeX resume templates (English and Korean)
 
 Two one-page LaTeX resume templates built for ATS parsing. Both use dummy data,
